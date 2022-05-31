@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/newsFragment">
+
+    <fragment
+        android:id="@+id/facilityDetailFragment"
+        android:name="com.example.perludilindungi.detail.FacilityDetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="address"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="long" />
+        <argument
+            android:name="facilityType"
+            app:argType="string" />
+        <argument
+            android:name="hospitalClass"
+            app:argType="string" />
+        <argument
+            android:name="code"
+            app:argType="string" />
+        <argument
+            android:name="city"
+            app:argType="string" />
+        <argument
+            android:name="latitude"
+            app:argType="string" />
+        <argument
+            android:name="longitude"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="province"
+            app:argType="string" />
+        <argument
+            android:name="source"
+            app:argType="string" />
+        <argument
+            android:name="status"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/facilityListFragment"
+        android:name="com.example.perludilindungi.list.FacilityListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/openDetailAction"
+            app:destination="@id/facilityDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.example.perludilindungi.news.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/openNewsDetail"
+            app:destination="@id/newsDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookmarkListFragment"
+        android:name="com.example.perludilindungi.list.BookmarkListFragment"
+        android:label="BookmarkListFragment" >
+        <action
+            android:id="@+id/openBookmarkDetailAction"
+            app:destination="@id/facilityDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkInFragment"
+        android:name="com.example.perludilindungi.checkin.CheckInFragment"
+        android:label="fragment_check_in"
+        tools:layout="@layout/fragment_check_in" />
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.example.perludilindungi.news.NewsDetailFragment"
+        android:label="fragment_news_detail"
+        tools:layout="@layout/fragment_news_detail">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="link"
+            app:argType="string" />
+        <argument
+            android:name="guid"
+            app:argType="string" />
+        <argument
+            android:name="pubDate"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+        <argument
+            android:name="enclosure"
+            app:argType="string" />
+    </fragment>
+</navigation>
